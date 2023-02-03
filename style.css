@@ -1,0 +1,148 @@
+:root{
+    --bg-color: hsl(225, 100%, 94%);
+    --plan-bg: hsl(225, 100%, 98%);
+    --title-color: hsl(223, 47%, 23%);
+    --text-color: hsl(224, 23%, 55%);
+    --accent-color: hsl(245, 75%, 52%);
+    --hover-color: hsl(245, 75%, 52%, 70%);
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+#card{
+    max-width: 327px;
+    background-color: white;
+    border-radius: 20px;    
+    overflow: hidden;
+}
+
+.card__body{
+    padding: 0 1.5em 2em 1.5em;
+}
+
+.order__info{
+    text-align: center;
+}
+
+.order__title{
+    font-size: 1.5em;
+    color: var(--title-color);
+    font-weight: 900;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.order__desc{
+    color: var(--text-color);
+    margin: 1em 0.5em 1.5em 0.5em;
+}
+
+.order__plan{
+    background-color: var(--plan-bg);
+    display: flex;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 0.9em;
+    align-items: center;
+}
+
+.plan__title{
+    color: var(--title-color);
+    font-weight: 900;
+    margin-left: 1.5em;
+}
+
+.plan__price{
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.plan__change{
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-left: auto;
+}
+
+.plan__change:hover{
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+.order__buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    row-gap: 1.5em;
+}
+
+.btn__payment{
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 15px 15px 0px hsl(245deg 75% 52% / 30%);
+}
+
+.btn__payment:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.btn__cancel{
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+.btn__cancel:hover{
+    color: var(--title-color);
+}
+
+@media only screen and (min-width: 376px) {
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: repeat-x;
+    }
+
+    #card{
+        max-width: 450px;
+    }
+
+    .card__body{
+        padding: 0 3em 3em 3em;
+    }
+    
+    .plan__title{
+        font-size: 1.2em;
+        margin-left: 1em;
+    }
+
+    .order__plan{
+        padding: 1.5em;
+    }
+
+    .order__title{
+        font-size: 1.7em;
+    }
+    
+    .order__buttons{
+        margin-top: 2em;
+    }
+}
+  
